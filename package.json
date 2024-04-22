@@ -4,7 +4,7 @@
   "description": "A custom CKEditor 5 build made by the CKEditor 5 online builder with full html",
   "version": "0.0.3",
   "license": "SEE LICENSE IN LICENSE.md",
-  "private": true,
+  "private": false,
   "main": "./build/ckeditor.js",
   "types": "./build/ckeditor.d.ts",
   "dependencies": {
