@@ -15,13 +15,17 @@ import { Essentials } from '@ckeditor/ckeditor5-essentials';
 import { Heading } from '@ckeditor/ckeditor5-heading';
 import { Highlight } from '@ckeditor/ckeditor5-highlight';
 import { HtmlEmbed } from '@ckeditor/ckeditor5-html-embed';
-import { GeneralHtmlSupport, HtmlComment } from '@ckeditor/ckeditor5-html-support';
+import {
+	GeneralHtmlSupport,
+	HtmlComment,
+	FullPage,
+} from '@ckeditor/ckeditor5-html-support';
 import {
 	Image,
 	ImageCaption,
 	ImageStyle,
 	ImageToolbar,
-	ImageUpload
+	ImageUpload,
 } from '@ckeditor/ckeditor5-image';
 import { Indent } from '@ckeditor/ckeditor5-indent';
 import { AutoLink, Link } from '@ckeditor/ckeditor5-link';
@@ -37,7 +41,7 @@ import {
 	SpecialCharactersEssentials,
 	SpecialCharactersLatin,
 	SpecialCharactersMathematical,
-	SpecialCharactersText
+	SpecialCharactersText,
 } from '@ckeditor/ckeditor5-special-characters';
 import { Table, TableToolbar } from '@ckeditor/ckeditor5-table';
 import { TextTransformation } from '@ckeditor/ckeditor5-typing';
@@ -55,6 +59,7 @@ class Editor extends ClassicEditor {
 		BlockQuote,
 		Bold,
 		Essentials,
+		FullPage,
 		GeneralHtmlSupport,
 		Heading,
 		Highlight,
@@ -83,7 +88,7 @@ class Editor extends ClassicEditor {
 		Table,
 		TableToolbar,
 		TextTransformation,
-		Undo
+		Undo,
 	];
 
 	public static override defaultConfig: EditorConfig = {
@@ -108,8 +113,8 @@ class Editor extends ClassicEditor {
 				'sourceEditing',
 				'imageUpload',
 				'blockQuote',
-				'insertTable'
-			]
+				'insertTable',
+			],
 		},
 		language: 'es',
 		image: {
@@ -118,16 +123,12 @@ class Editor extends ClassicEditor {
 				'toggleImageCaption',
 				'imageStyle:inline',
 				'imageStyle:block',
-				'imageStyle:side'
-			]
+				'imageStyle:side',
+			],
 		},
 		table: {
-			contentToolbar: [
-				'tableColumn',
-				'tableRow',
-				'mergeTableCells'
-			]
-		}
+			contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells'],
+		},
 	};
 }
 
